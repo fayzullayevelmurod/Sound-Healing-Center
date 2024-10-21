@@ -6,9 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Asap:ital,wght@0,100..900;1,100..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Asap:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- link normalize css -->
   <link rel="stylesheet" href="libs/normalize.css">
   <!-- custom css -->
@@ -18,7 +22,7 @@
 <body>
 
   <div class="wrapper">
-    <header>
+    <header class="header">
       <div class="container">
         <div class="user-box">
           <div class="avatar">
@@ -32,17 +36,79 @@
         <div class="header-right">
           <img src="images/icons/telegram.svg" alt="telegram">
           <span>Наш ТГ-канал:</span>
-          <a href="#!">@soundhealing_center</a>
+          <a href="https://t.me/soundhealing_center">@soundhealing_center</a>
         </div>
       </div>
     </header>
 
     <main>
+      <div class="search-box">
+        <div class="container">
+          <div class="search-box__icon">
+            <img src="images/icons/search-box.svg" alt="search">
+          </div>
+          <input class="search-box__form" type="search">
+        </div>
+      </div>
 
+      <section class="service-info">
+        <div class="container">
+          <div class="service-info__swiper swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="service-info__card one">
+                  <img src="images/icons/service-info-img-1.svg" alt="">
+                  <h3 class="service-info__card-title">о нас</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="service-info__card">
+                  <img class="location-one" src="images/icons/location-2.svg" alt="">
+                  <img class="location-two" src="images/icons/location-2.svg" alt="">
+                  <h3 class="service-info__card-title">доставка</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="service-info__card">
+                  <img class="check-one" src="images/icons/check-one.svg" alt="">
+                  <img class="check-two" src="images/icons/check-two.svg" alt="">
+                  <h3 class="service-info__card-title">гарантия <br>
+                    и возврат</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="service-info__card">
+                  <img class="folder-one" src="images/icons/folder.svg" alt="">
+                  <img class="folder-two" src="images/icons/folder.svg" alt="">
+                  <img class="folder-three" src="images/icons/folder.svg" alt="">
+                  <h3 class="service-info__card-title">наши поставщики</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="service-info__card">
+                  <img class="ruble-one" src="images/icons/ruble.svg" alt="">
+                  <img class="ruble-two" src="images/icons/ruble.svg" alt="">
+                  <img class="ruble-three" src="images/icons/duble-rubl.svg" alt="">
+                  <h3 class="service-info__card-title">как сделать <br> заказ?</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="user-actions">
+
+      </div>
     </main>
 
     <footer></footer>
   </div>
+
+  <!-- swiper js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- custom js -->
+  <script src="./js/script.js"></script>
 
 </body>
 
