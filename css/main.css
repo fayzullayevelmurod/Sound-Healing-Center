@@ -441,6 +441,9 @@ main::before {
   color: #0d0d0d;
 }
 
+.catalog {
+  padding-bottom: 20px;
+}
 .catalog-cards {
   margin-top: 10px;
   display: flex;
