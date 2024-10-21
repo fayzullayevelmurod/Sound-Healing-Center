@@ -225,7 +225,7 @@ main::before {
 .search-box {
   margin: 10px 0 0 0;
 }
-.search-box .container {
+.search-box .relative-box {
   position: relative;
 }
 .search-box__icon {
