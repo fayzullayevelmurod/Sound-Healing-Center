@@ -140,14 +140,13 @@ body {
 .form-control {
   background: #fff;
   border: 1px solid #f39871;
-  font-family: "Alef", sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 19.43px;
   letter-spacing: -0.0539620817px;
   padding: 10px 13px;
   height: 38px;
-  color: #6c5a59;
+  color: #72605f;
   display: block;
   width: 100%;
   border-radius: 11px;
@@ -941,6 +940,8 @@ main::before {
   margin: 100px 18px 40px 18px;
   background: url(../images/submission-form-bg.png) no-repeat;
   background-size: cover;
+  border-radius: 11px;
+  filter: drop-shadow(0px 7px 4.7px rgba(0, 0, 0, 0.2509803922));
 }
 .submission-form .brown-btn {
   font-size: 14px;
@@ -984,9 +985,242 @@ main::before {
   min-width: 90px;
 }
 
+.profile-page {
+  padding-bottom: 50px;
+  position: relative;
+}
+.profile-page::after {
+  content: "";
+  position: absolute;
+  bottom: -85px;
+  right: -85px;
+  border: 1px solid #f39871;
+  opacity: 0.51;
+  width: 253px;
+  height: 252px;
+  border-radius: 50%;
+}
+.profile-page main::after {
+  top: 0;
+  bottom: unset;
+}
+.profile-page .title {
+  padding-top: 25px;
+}
+.profile-page .container {
+  padding-bottom: 10px;
+}
+.profile-page .submission-form {
+  background: url(../images/profile-form-bg.png) no-repeat;
+  background-size: cover;
+  filter: drop-shadow(0px 7px 5.2px rgba(0, 0, 0, 0.2509803922));
+}
+.profile-page .submission-form form {
+  padding: 33px 12px 40px 12px;
+}
+
+.product-details {
+  margin-top: 7px;
+}
+.product-details__img {
+  position: relative;
+  margin-bottom: 19px;
+}
+.product-details .saved-icon {
+  position: absolute;
+  top: 19px;
+  right: 17px;
+  height: 25px;
+  width: 23px;
+}
+.product-details .product-img {
+  width: 100%;
+  height: 339px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+}
+.product-details .product-info__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 19.43px;
+  letter-spacing: -0.0539620817px;
+  text-align: left;
+  color: #000000;
+}
+.product-details .product-info__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 -24px 24px 0;
+}
+.product-details .product-info .price-box {
+  border: 1px solid #edcbbb;
+  border-radius: 24px;
+  height: 33px;
+  width: 129px;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+}
+.product-details .product-info .price {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 19.43px;
+  letter-spacing: -0.0539620817px;
+  color: #f39871;
+}
+.product-details .product-info__desc {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 19.43px;
+  letter-spacing: -0.0539620817px;
+}
+.product-details .product-characteristics {
+  border: 1px solid #f39871;
+  border-radius: 11px;
+  background: #f8f5f3;
+  padding: 7px 11px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+.product-details .product-characteristics .box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.product-details .product-characteristics p {
+  color: #000;
+  font-size: 10px;
+  line-height: 19.43px;
+  font-weight: 400;
+}
+.product-details .product-characteristics span {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19.43px;
+  letter-spacing: -0.0539620817px;
+}
+.product-details .product-characteristics .show-more {
+  font-family: "Asap", sans-serif;
+  font-size: 9px;
+  font-weight: 100;
+  line-height: 19.63px;
+  color: #6c5a59;
+  border-bottom: 1px solid #6c5a59;
+}
+.product-details .service-info__title {
+  font-family: "Asap", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19.63px;
+  color: #6c5a59;
+  margin: 10px 0 20px 0;
+}
+.product-details .service-info__card.one .service-info__card-title {
+  color: #fff;
+}
+.product-details .service-info__card-title {
+  color: #98867f;
+}
+.product-details .service-info__card.last-child {
+  padding-top: 10px;
+}
+.product-details .accordions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.product-details .accordion {
+  border: 1px solid #ffffff;
+  background: rgba(255, 255, 255, 0.5019607843);
+  border-radius: 11px;
+  padding: 0 12px 0 12px;
+}
+.product-details .accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  cursor: pointer;
+}
+.product-details .accordion-header img {
+  transition: all 0.2s linear;
+}
+.product-details .accordion-header.acctive img {
+  transform: rotate(180deg);
+}
+.product-details .accordion-title {
+  font-family: "Aleo", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 19.43px;
+  letter-spacing: -0.0539620817px;
+  color: #5b4946;
+}
+.product-details .accordion-desc {
+  font-family: "Aleo", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19.43px;
+  color: #5b4946;
+  letter-spacing: -0.0539620817px;
+}
+.product-details .accordion-content {
+  padding: 9px 0 9px 0;
+  display: none;
+}
+.product-details .accordion-content.show {
+  display: block;
+}
+.product-details .accordion-check__box {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 5px;
+  border: 1px solid #ffffff;
+  background: #eae8e7;
+  padding: 15px;
+  border-radius: 11px;
+}
+.product-details .accordion .check-input {
+  display: none;
+}
+.product-details .accordion .check-input:checked + .check-box {
+  background: #6c5a59;
+}
+.product-details .accordion .check-input:checked + .check-box::before {
+  left: unset;
+  right: 0;
+}
+.product-details .accordion .check-box {
+  position: relative;
+  border-radius: 28px;
+  background: #d9d9d9;
+  width: 47px;
+  height: 23.19px;
+  transition: all 0.2s linear;
+}
+.product-details .accordion .check-box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #ffffff;
+  width: 23px;
+  height: 100%;
+  border-radius: 50%;
+  transition: all 0.2s linear;
+}
+
 @media screen and (max-width: 360px) {
   .submission-form .title {
     padding-left: 0;
+  }
+  .service-info__card-title {
+    font-size: 10px;
+    line-height: 12px;
   }
 }
 @media screen and (max-width: 350px) {
@@ -999,7 +1233,7 @@ main::before {
     height: 38px;
   }
   .service-info__card {
-    padding-top: 12px;
+    padding-top: 25px;
   }
   .service-info .swiper-slide {
     height: 80px !important;
