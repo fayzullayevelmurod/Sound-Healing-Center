@@ -71,3 +71,37 @@ accordion.forEach(accordion => {
     accordionHeader.classList.toggle('acctive');
   });
 })
+
+// reviews-swiper
+try {
+  var swiper = new Swiper('.reviews-swiper', {
+    slidesPerView: 2.4,
+    spaceBetween: 12,
+    speed: 700,
+    pagination: {
+      el: '.reviews-pagination',
+      clickable: true,
+    },
+  });
+} catch (error) {
+}
+
+// add-basket-btn
+const addBasketBtn = document.querySelector('.add-basket-btn');
+if (addBasketBtn) {
+  let isAddedToBasket = false;
+
+  addBasketBtn.addEventListener('click', (e) => {
+    if (!isAddedToBasket) {
+      e.preventDefault();
+      addBasketBtn.textContent = 'Перейти в корзину';
+      addBasketBtn.classList.add('basket-btn');
+      addBasketBtn.setAttribute('href', 'basket.html');
+      isAddedToBasket = true;
+    }
+  });
+}
+
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
