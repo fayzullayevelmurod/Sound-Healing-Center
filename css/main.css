@@ -524,9 +524,12 @@ main::before {
   height: 115px;
 }
 
+.profile-page main {
+  padding-bottom: 50px;
+}
 .profile-page main::before {
   top: unset;
-  bottom: 0;
+  bottom: -23px;
 }
 
 .profile-section {

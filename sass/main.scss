@@ -545,9 +545,10 @@ main {
 // profile-page
 .profile-page {
   main {
+    padding-bottom: 50px;
     &::before {
       top: unset;
-      bottom: 0;
+      bottom: -23px;
     }
   }
 }
