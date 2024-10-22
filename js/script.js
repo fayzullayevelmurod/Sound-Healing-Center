@@ -109,3 +109,20 @@ try {
 } catch (error) {
 
 }
+
+
+const characteristicsModal = document.querySelector('.characteristics-modal');
+if(characteristicsModal) {
+  const openCharacteristicsModal = document.querySelector('.characteristics-btn');
+  const closeCharacteristicsModal = characteristicsModal.querySelector('.characteristics-modal__close');
+
+  openCharacteristicsModal.addEventListener('click', () => {
+    characteristicsModal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeCharacteristicsModal.addEventListener('click', () => {
+    characteristicsModal.classList.remove('show');
+    document.body.style.overflow = '';
+  });
+}

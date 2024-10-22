@@ -1089,41 +1089,6 @@ main::before {
   line-height: 19.43px;
   letter-spacing: -0.0539620817px;
 }
-.product-details .product-characteristics {
-  border: 1px solid #f39871;
-  border-radius: 11px;
-  background: #f8f5f3;
-  padding: 7px 11px;
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  margin-top: 25px;
-}
-.product-details .product-characteristics .box {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.product-details .product-characteristics p {
-  color: #000;
-  font-size: 10px;
-  line-height: 19.43px;
-  font-weight: 400;
-}
-.product-details .product-characteristics span {
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 19.43px;
-  letter-spacing: -0.0539620817px;
-}
-.product-details .product-characteristics .show-more {
-  font-family: "Asap", sans-serif;
-  font-size: 9px;
-  font-weight: 100;
-  line-height: 19.63px;
-  color: #6c5a59;
-  border-bottom: 1px solid #6c5a59;
-}
 .product-details .service-info__title {
   font-family: "Asap", sans-serif;
   font-size: 12px;
@@ -1516,6 +1481,170 @@ main::before {
   transform: translateX(-50%);
 }
 
+.my-orders__page .title {
+  padding: 110px 0 20px 0;
+}
+.my-orders__page main {
+  padding-bottom: 100px;
+}
+.my-orders__page main::after {
+  top: 0;
+}
+.my-orders__page main::before {
+  top: unset;
+  bottom: -20px;
+}
+
+.my-orders {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.my-orders__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding: 0 5px;
+}
+.my-orders__cards-label {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 19.43px;
+  letter-spacing: -0.0539620817px;
+  text-align: left;
+  color: #6c5a59;
+}
+.my-orders__card {
+  background: url(../images/my-order-card-bg.png) no-repeat;
+  background-size: 100% 100%;
+  border-radius: 11px;
+  padding: 8px 15px 8px 8px;
+  color: #000000;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2509803922));
+  height: 77px;
+  position: relative;
+}
+.my-orders__card .card-btn {
+  background: #6c5a59;
+  width: 59px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 6px;
+  font-size: 7px;
+  font-weight: 400;
+  line-height: 19.43px;
+  letter-spacing: -0.0539620817px;
+  color: #fff;
+  border-radius: 4px;
+}
+.my-orders__card .card-btn.yellow-btn {
+  box-shadow: 0px 0px 7px 0px rgba(255, 153, 0, 0.8392156863);
+}
+.my-orders__card .card-btn.gree-btn {
+  box-shadow: 0px 0px 7px 0px rgba(20, 255, 0, 0.8392156863);
+}
+.my-orders__card .card-btn.red-btn {
+  box-shadow: 0px 0px 7px 0px rgba(255, 0, 0, 0.8392156863);
+}
+.my-orders__card .left-box {
+  display: flex;
+  align-items: start;
+  gap: 13px;
+}
+.my-orders__card-name {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 19.43px;
+  letter-spacing: -0.0539620817px;
+}
+.my-orders__card-price {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 19.43px;
+  letter-spacing: -0.0539620817px;
+  padding-top: 10px;
+}
+.my-orders__card-img {
+  width: 62px;
+  height: 62px;
+  border-radius: 11px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product-characteristics {
+  border: 1px solid #f39871;
+  border-radius: 11px;
+  background: #f8f5f3;
+  padding: 7px 11px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+.product-characteristics .box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.product-characteristics p {
+  color: #000;
+  font-size: 10px;
+  line-height: 19.43px;
+  font-weight: 400;
+}
+.product-characteristics span {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19.43px;
+  letter-spacing: -0.0539620817px;
+}
+.product-characteristics .show-more {
+  font-family: "Asap", sans-serif;
+  font-size: 9px;
+  font-weight: 100;
+  line-height: 19.63px;
+  color: #6c5a59;
+  border-bottom: 1px solid #6c5a59;
+}
+
+.characteristics-modal {
+  position: fixed;
+  bottom: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 7px 5.2px 0px rgba(0, 0, 0, 0.2509803922);
+  background: #fff;
+  z-index: 100;
+  width: calc(100% - 24px);
+  padding-top: 17px;
+  transition: all 0.2s linear;
+  display: block;
+}
+.characteristics-modal.show {
+  bottom: 0;
+}
+.characteristics-modal__close {
+  border-top: 1px solid #f39871;
+  width: 35px;
+  height: 10px;
+  margin: 0 auto;
+  display: block;
+}
+.characteristics-modal .characteristics-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 27px;
+}
+
 @media screen and (max-width: 360px) {
   .submission-form .title {
     padding-left: 0;
@@ -1523,6 +1652,9 @@ main::before {
   .service-info__card-title {
     font-size: 10px;
     line-height: 12px;
+  }
+  .my-orders__card .card-btn {
+    right: 0;
   }
 }
 @media screen and (max-width: 350px) {
