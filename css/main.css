@@ -71,11 +71,30 @@ body {
   background: #f8f5f3;
 }
 
+.brown-btn {
+  font-family: "Asap", sans-serif;
+  font-size: 8.72px;
+  font-weight: 400;
+  line-height: 19.63px;
+  color: #fff;
+  background: #6c5a59;
+  border-radius: 23px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .wrapper {
   overflow: hidden;
   max-width: 768px;
   width: 100%;
   margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.wrapper.hgome {
+  padding-top: 0;
 }
 
 .container {
@@ -431,6 +450,7 @@ main::before {
      object-fit: cover;
   margin: 0 auto;
   width: 104px;
+  border-radius: 15px;
 }
 .categories-card__title {
   font-size: 9.85px;
@@ -488,4 +508,183 @@ main::before {
   color: #f39871;
   height: 17px;
   width: 100%;
+}
+
+.categories-page__cards {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.categories-page__cards .categories-card {
+  min-height: 160px;
+}
+.categories-page__cards img {
+  width: 130px;
+  height: 115px;
+}
+
+.profile-page main::before {
+  top: unset;
+  bottom: 0;
+}
+
+.profile-section {
+  padding-top: 86px;
+}
+.profile-section__boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.profile-section .profile-box {
+  background: #efe8e3;
+  padding: 9px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.profile-section .profile-box .avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  position: relative;
+  background: #fff;
+}
+.profile-section .profile-box .status {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 24px;
+  height: 24px;
+  background: #6c5a59;
+  border-radius: 50%;
+}
+.profile-section .profile-box .user-name {
+  font-family: "Asap", sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 19.63px;
+  color: #6c5a59;
+}
+.profile-section .profile-box .user-contact .box {
+  display: flex;
+  align-items: start;
+  gap: 22px;
+}
+.profile-section .profile-box .label {
+  min-width: 45px;
+}
+.profile-section .profile-box .label,
+.profile-section .profile-box .link {
+  font-family: "Asap", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 19.63px;
+  color: #6c5a59;
+}
+.profile-section .user-options {
+  display: flex;
+  align-items: end;
+  background: linear-gradient(90deg, #ede4de 28.44%, #b2a49e 98.38%);
+  padding: 14px 18px 14px 13px;
+  border-radius: 11px;
+  justify-content: space-between;
+}
+.profile-section .user-options__left-box {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.profile-section .user-options__img {
+  width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-section .user-options .read-more {
+  font-size: 10px;
+  font-weight: 100;
+  line-height: 19.63px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+.profile-section .user-options__title {
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 19.63px;
+  color: #6c5a59;
+}
+
+.delivery {
+  margin-top: 88px;
+  background: #b4a6a0;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  padding: 37px 24px 21px 24px;
+  border-radius: 11px;
+  color: #f8f5f3;
+}
+.delivery-title {
+  font-family: "Asap", sans-serif;
+  font-size: 17.45px;
+  font-weight: 900;
+  line-height: 19.63px;
+  padding-bottom: 5px;
+}
+.delivery-info {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.delivery-info__text {
+  font-family: "Asap", sans-serif;
+  font-size: 10.9px;
+  font-weight: 400;
+  line-height: 19.63px;
+  text-align: left;
+}
+.delivery-footer {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  padding: 32px 13px 0 10px;
+}
+.delivery-footer .brown-btn {
+  width: 100%;
+}
+.delivery-footer .brown-btn:first-child {
+  min-width: 107px;
+  max-width: 107px;
+}
+.delivery .status {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  /* Har bir loader to'pchasiga kechikish beramiz */
+}
+.delivery .status .loader {
+  background: #f8f5f3;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  animation: loader-animation 1.4s infinite ease-in-out;
+}
+.delivery .status .loader:nth-child(1) {
+  animation-delay: 0s;
+}
+.delivery .status .loader:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.delivery .status .loader:nth-child(3) {
+  animation-delay: 0.4s;
+}
+@keyframes loader-animation {
+  0%, 100% {
+    transform: scale(1); /* Odatdagi holat */
+  }
+  50% {
+    transform: scale(1.5); /* Kattalashish */
+  }
 }/*# sourceMappingURL=main.css.map */
