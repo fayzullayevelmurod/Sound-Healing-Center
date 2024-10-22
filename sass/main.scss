@@ -131,6 +131,34 @@ body {
   }
 }
 
+.form-control {
+  background: #fff;
+  border: 1px solid #f39871;
+  font-family: 'Alef', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 19.43px;
+  letter-spacing: -0.05396208167076111px;
+  padding: 10px 13px;
+  height: 38px;
+  color: #6c5a59;
+  display: block;
+  width: 100%;
+  border-radius: 11px;
+  &::placeholder {
+    color: #6c5a59;
+    opacity: 0.6;
+  }
+  &__textarea {
+    height: 77px;
+    font-size: 8px;
+    font-weight: 100;
+    line-height: 19.43px;
+    letter-spacing: -0.05396208167076111px;
+    padding: 7px 5px;
+  }
+}
+
 // header
 .header {
   background: url(../images/header-bg.png) no-repeat;
@@ -732,10 +760,46 @@ main {
 
 // basket-page
 .basket-page {
-  height: 100vh;
-  min-height: -webkit-fill-available;
+  padding-bottom: 160px;
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 329px;
+    height: 328px;
+    opacity: 0.5;
+    border: 1px solid #f39871;
+    border-radius: 50%;
+    z-index: -1;
+    right: -170px;
+    bottom: -144px;
+  }
   main {
     margin-top: 35px;
+    &::before {
+      bottom: -135px;
+      top: unset;
+    }
+  }
+  .container {
+    position: relative;
+  }
+  .order-btn {
+    position: fixed;
+    bottom: 25px;
+    left: 0;
+    width: 100%;
+    height: 38.91px;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 19.43px;
+    letter-spacing: -0.05396208167076111px;
+    z-index: 100;
+    border-radius: 11px;
+    width: calc(100% - 24px);
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 .basket {
@@ -834,6 +898,126 @@ main {
 }
 // basket-page
 
+// account-details
+.account-details {
+  padding-top: 20px;
+  &__title {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 19.43px;
+    letter-spacing: -0.05396208167076111px;
+    color: #6c5a59;
+    padding-bottom: 7px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+// account-details
+.order-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: #f8f5f3;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: none;
+  &.show {
+    display: flex;
+  }
+  .modal-title {
+    font-size: 22.48px;
+    font-weight: 400;
+    line-height: 36.39px;
+    letter-spacing: -0.10107582807540894px;
+    color: #6c5a59;
+  }
+  img {
+    margin: 18px 0 27px 0;
+  }
+  .brown-btn {
+    font-size: 22.48px;
+    font-weight: 400;
+    letter-spacing: -0.10107582807540894px;
+    width: 162px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// submission-page
+.submission-page {
+  main {
+    &::before {
+      top: -100px;
+    }
+    &::after {
+      bottom: -100px;
+      top: unset;
+      right: -200px;
+    }
+  }
+}
+.submission-form {
+  margin: 100px 18px 40px 18px;
+  background: url(../images/submission-form-bg.png) no-repeat;
+  background-size: cover;
+  .brown-btn {
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 19.43px;
+    letter-spacing: -0.05396208167076111px;
+    width: 100%;
+    height: 39px;
+    border-radius: 0 0 11px 11px;
+  }
+  .title {
+    padding: 13px 0 0 8px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 63px 13px 50px 20px;
+    gap: 22px;
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .form-control__textarea {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 19.43px;
+      letter-spacing: -0.05396208167076111px;
+      border-radius: 5px;
+      margin-top: 6px;
+    }
+    .form-control {
+      border-radius: 5px;
+    }
+    label {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 19.43px;
+      letter-spacing: -0.05396208167076111px;
+      min-width: 90px;
+    }
+  }
+}
+// submission-page
+@media screen and (max-width: 360px) {
+  .submission-form .title {
+    padding-left: 0;
+  }
+}
 @media screen and (max-width: 350px) {
   .user-actions__card {
     gap: 10px;

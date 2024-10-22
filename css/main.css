@@ -137,6 +137,38 @@ body {
   border-bottom: 1px solid #6c5a59;
 }
 
+.form-control {
+  background: #fff;
+  border: 1px solid #f39871;
+  font-family: "Alef", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 19.43px;
+  letter-spacing: -0.0539620817px;
+  padding: 10px 13px;
+  height: 38px;
+  color: #6c5a59;
+  display: block;
+  width: 100%;
+  border-radius: 11px;
+}
+.form-control::-moz-placeholder {
+  color: #6c5a59;
+  opacity: 0.6;
+}
+.form-control::placeholder {
+  color: #6c5a59;
+  opacity: 0.6;
+}
+.form-control__textarea {
+  height: 77px;
+  font-size: 8px;
+  font-weight: 100;
+  line-height: 19.43px;
+  letter-spacing: -0.0539620817px;
+  padding: 7px 5px;
+}
+
 .header {
   background: url(../images/header-bg.png) no-repeat;
   background-size: 100% 100%;
@@ -707,11 +739,47 @@ main::before {
 }
 
 .basket-page {
-  height: 100vh;
-  min-height: -webkit-fill-available;
+  padding-bottom: 160px;
+  position: relative;
+  z-index: 1;
+}
+.basket-page::after {
+  content: "";
+  position: absolute;
+  width: 329px;
+  height: 328px;
+  opacity: 0.5;
+  border: 1px solid #f39871;
+  border-radius: 50%;
+  z-index: -1;
+  right: -170px;
+  bottom: -144px;
 }
 .basket-page main {
   margin-top: 35px;
+}
+.basket-page main::before {
+  bottom: -135px;
+  top: unset;
+}
+.basket-page .container {
+  position: relative;
+}
+.basket-page .order-btn {
+  position: fixed;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  height: 38.91px;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 19.43px;
+  letter-spacing: -0.0539620817px;
+  z-index: 100;
+  border-radius: 11px;
+  width: calc(100% - 24px);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .basket .title {
@@ -806,6 +874,121 @@ main::before {
   letter-spacing: -0.0539620817px;
 }
 
+.account-details {
+  padding-top: 20px;
+}
+.account-details__title {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 19.43px;
+  letter-spacing: -0.0539620817px;
+  color: #6c5a59;
+  padding-bottom: 7px;
+}
+.account-details form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: #f8f5f3;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: none;
+}
+.order-modal.show {
+  display: flex;
+}
+.order-modal .modal-title {
+  font-size: 22.48px;
+  font-weight: 400;
+  line-height: 36.39px;
+  letter-spacing: -0.1010758281px;
+  color: #6c5a59;
+}
+.order-modal img {
+  margin: 18px 0 27px 0;
+}
+.order-modal .brown-btn {
+  font-size: 22.48px;
+  font-weight: 400;
+  letter-spacing: -0.1010758281px;
+  width: 162px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submission-page main::before {
+  top: -100px;
+}
+.submission-page main::after {
+  bottom: -100px;
+  top: unset;
+  right: -200px;
+}
+
+.submission-form {
+  margin: 100px 18px 40px 18px;
+  background: url(../images/submission-form-bg.png) no-repeat;
+  background-size: cover;
+}
+.submission-form .brown-btn {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 19.43px;
+  letter-spacing: -0.0539620817px;
+  width: 100%;
+  height: 39px;
+  border-radius: 0 0 11px 11px;
+}
+.submission-form .title {
+  padding: 13px 0 0 8px;
+}
+.submission-form form {
+  display: flex;
+  flex-direction: column;
+  padding: 63px 13px 50px 20px;
+  gap: 22px;
+}
+.submission-form form > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.submission-form form .form-control__textarea {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19.43px;
+  letter-spacing: -0.0539620817px;
+  border-radius: 5px;
+  margin-top: 6px;
+}
+.submission-form form .form-control {
+  border-radius: 5px;
+}
+.submission-form form label {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19.43px;
+  letter-spacing: -0.0539620817px;
+  min-width: 90px;
+}
+
+@media screen and (max-width: 360px) {
+  .submission-form .title {
+    padding-left: 0;
+  }
+}
 @media screen and (max-width: 350px) {
   .user-actions__card {
     gap: 10px;

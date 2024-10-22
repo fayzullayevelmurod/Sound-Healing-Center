@@ -40,3 +40,20 @@ counters.forEach(counter => {
     }
   })
 })
+
+
+// order-modal
+const orderModal = document.querySelector('.order-modal');
+const openOrderModal = document.querySelector('.order-btn');
+const closeOrderModal = orderModal.querySelector('.close-modal');
+
+
+openOrderModal.addEventListener('click', () => {
+  orderModal.classList.add('show');
+  document.body.style.overflow = 'hidden';
+});
+
+closeOrderModal.addEventListener('click', () => {
+  orderModal.classList.remove('show');
+  document.body.style.overflow = '';
+});
