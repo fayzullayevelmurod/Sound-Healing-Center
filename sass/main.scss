@@ -1342,7 +1342,7 @@ main {
 
 // chat-page
 .chat-page {
-  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   overflow-y: auto;
   overflow-x: hidden;
@@ -1409,7 +1409,8 @@ main {
     align-items: end;
     gap: 3px;
     .user-box {
-      width: 30px;
+      min-width: 30px;
+      max-width: 30px;
       height: 30px;
       border-radius: 50%;
       background: #6c5a59;
@@ -1504,6 +1505,64 @@ main {
   }
 }
 // chat-page
+
+// intro
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  &::before {
+    content: ' ';
+    position: absolute;
+    top: -240px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #f39871;
+    height: 439px;
+    border-radius: 50%;
+    z-index: -1;
+    width: 439px;
+  }
+  &::after {
+    content: ' ';
+    position: absolute;
+    bottom: -240px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #f39871;
+    width: 439px;
+    height: 439px;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  .circle {
+    width: 439px;
+    height: 439px;
+    border: 1px solid #f39871;
+    border: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  .logo {
+    width: 140px;
+    height: 93px;
+  }
+  .down-btn {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+// intro
 
 @media screen and (max-width: 360px) {
   .submission-form .title {
