@@ -200,6 +200,7 @@ body {
   line-height: 18px;
   letter-spacing: -0.0500000007px;
   text-align: center;
+  color: #fff;
 }
 .header .user-box .user-status {
   font-family: "Asap", sans-serif;
@@ -1426,15 +1427,32 @@ main::before {
   height: 26px;
 }
 
+.fade {
+  animation: fade 0.5s ease-in-out;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: #f8f5f3;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
-  position: relative;
-  z-index: 1;
   overflow: hidden;
+  transition: all 0.2s linear;
 }
 .intro::before {
   content: " ";

@@ -112,7 +112,7 @@ try {
 
 
 const characteristicsModal = document.querySelector('.characteristics-modal');
-if(characteristicsModal) {
+if (characteristicsModal) {
   const openCharacteristicsModal = document.querySelector('.characteristics-btn');
   const closeCharacteristicsModal = characteristicsModal.querySelector('.characteristics-modal__close');
 
@@ -125,4 +125,50 @@ if(characteristicsModal) {
     characteristicsModal.classList.remove('show');
     document.body.style.overflow = '';
   });
+}
+
+
+// Sahifaga kirgan foydalanuvchini sessionStorage'ga yozamiz
+try {
+  window.onload = function () {
+    sessionStorage.setItem('lastPage', window.location.href);
+  };
+
+  // "Orqaga" tugmasini bosganda ishlaydigan funksiya
+  document.getElementById('prevButton').addEventListener('click', function () {
+    var lastPage = sessionStorage.getItem('lastPage');
+
+    // Agar sahifa boshqa manbadan kirilgan bo'lsa, tarixni tekshiramiz
+    if (document.referrer && window.history.length > 1 && lastPage !== 'index.html') {
+      window.history.back(); // Avvalgi sahifaga qaytadi
+    } else {
+      // Agar hech qanday avvalgi sahifa bo'lmasa yoki foydalanuvchi URL'ni qo'lda kirgan bo'lsa, asosiy sahifaga o'tadi
+      window.location.href = 'index.html';
+    }
+  });
+} catch (error) {
+
+}
+
+
+try {
+  const intro = document.querySelector('.intro');
+
+  // LocalStorage'dan 'introSeen' qiymatini tekshiramiz
+  if (!localStorage.getItem('introSeen')) {
+    // Agar 'introSeen' hali mavjud bo'lmasa, intro ko'rsatiladi
+    setTimeout(() => {
+      intro.style.opacity = '0';
+      setTimeout(() => {
+        intro.style.display = 'none';
+        // Intro bir marta ko'rsatilgandan so'ng, localStorage'ga belgi qo'yamiz
+        localStorage.setItem('introSeen', 'true');
+      }, 500);
+    }, 3000);
+  } else {
+    // Agar intro allaqachon ko'rsatilgan bo'lsa, uni yashiramiz
+    intro.style.display = 'none';
+  }
+} catch (error) {
+
 }
